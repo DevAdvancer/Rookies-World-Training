@@ -1,0 +1,63 @@
+def factorial(n):
+    if n == 0 or n == 1:
+        return 1
+    return n * factorial(n - 1)
+
+def fibonacci(n):
+    a, b = 0, 1
+    series = []
+    for _ in range(n):
+        series.append(a)
+        a, b = b, a + b
+    return series
+
+def reverse_number(n):
+    return int(str(n)[::-1])
+
+def reverse_string(s):
+    return s[::-1]
+
+def is_palindrome_number(n):
+    return str(n) == str(n)[::-1]
+
+def is_palindrome_string(s):
+    return s == s[::-1]
+
+while True:
+    print("\nMenu:")
+    print("1. Factorial of a number")
+    print("2. Fibonacci series")
+    print("3. Reverse of a number")
+    print("4. Reverse of a string")
+    print("5. Palindrome of a number")
+    print("6. Palindrome of a string")
+    print("7. Exit")
+
+    choice = int(input("Enter your choice: "))
+
+    if choice == 1:
+        num = int(input("Enter number: "))
+        print("Factorial:", factorial(num))
+    elif choice == 2:
+        n = int(input("Enter terms: "))
+        print("Fibonacci series:", fibonacci(n))
+    elif choice == 3:
+        num = int(input("Enter number: "))
+        print("Reverse:", reverse_number(num))
+    elif choice == 4:
+        s = input("Enter string: ")
+        print("Reverse:", reverse_string(s))
+    elif choice == 5:
+        num = int(input("Enter number: "))
+        print("Palindrome:", is_palindrome_number(num))
+    elif choice == 6:
+        s = input("Enter string: ")
+        print("Palindrome:", is_palindrome_string(s))
+    elif choice == 7:
+        break
+    else:
+        print("Invalid choice")
+
+Q. Why is python general purpose language ! Who created it? And which year
+=>
+Python is called a general-purpose language because it can be used to build a wide variety of applications such as web development, data science, artificial intelligence, machine learning, automation, game development, and more. It was created by Guido van Rossum in the year 1991
